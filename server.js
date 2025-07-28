@@ -5,7 +5,7 @@ dotenv.config();
 import "./config/connection.js"
 import logger from "./middlewares/logger.js";
 import recipeRoute from "./routes/recipeRoutes.js"
-import recipeRoute from "./routes/userRoute.js"
+import userRoute from "./routes/userRoutes.js"
 const app = express();
 const port = process.env.PORT || 7000
 
