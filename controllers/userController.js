@@ -17,8 +17,7 @@ export const signUpUser = async (req, res) => {
         if (!firstName || !lastName || !email || !password) {
             return res.status(400).json({ success: false, message: "all fields are required" });
         }
-
-        const isMatch = await User.find({ email: email });
+        const isMatch = await User.findOne({ email: email });
         if (isMatch) {
             return res.status(400).json({ success: false, message: "User already exists, please Login!" });
         }
